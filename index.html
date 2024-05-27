@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Time Table</title>
+    <link rel="stylesheet" href="time.css">
+  </head>
+  <body>
+    <form action="https://postman-echo.com/post" method="post" target="_blank">
+      <table border="1" id="tbl">
+        <caption>
+          Time-Table
+        </caption>
+        <thead>
+          <th>Sr No.</th>
+          <th>Date</th>
+          <th>Day name</th>
+          <th>subject</th>
+          <th>Start Time</th>
+          <th>End Time</th>
+          <th>Total time</th>
+          <th>Task complete</th>
+          <th>Comments</th>
+          <th>Submit</th>
+        </thead>
+        <tr>
+          <td>
+            <input type="number" placeholder="Enter SrNo" name="SrNo" required/>
+          </td>
+          <td>
+            <input type="date" name="Date" required/>
+          </td>
+          <td>
+            <input type="text" placeholder="Enter the day name" name="Day" required/>
+          </td>
+          <td>
+            <select name="Sub" id="">
+              <option value="select sub">Choice is your subject</option>
+              <option value="html">HTML</option>
+              <option value="css">CSS</option>
+              <option value="js">JS</option>
+              <option value="ES6">ES6</option>
+              <option value="TS">tS</option>
+              <option value="mysql">mysql</option>
+              <option value="NodeJS">Node JS</option>
+              <option value="Project">project</option>
+              <option value="Workshop">workshop</option>
+              <option value="Meeting">meeting</option>
+              <option value="Notes">notes</option>
+              <option value="MongoDB">mongoDB</option>
+              <option value="Other">other</option>
+            </select>
+          </td>
+          <td>
+            <input type="time" name="Stime" required/>
+          </td>
+          <td>
+            <input type="time" name="Etime" required/>
+          </td>
+
+          <td>
+            <input type="text" placeholder="Time in hours" name="TotalTime" required/>
+          </td>
+          <td>
+            <input type="checkbox" id="yes" name="Task" value="yes"/>
+            <label for="yes">yes</label>
+            <input type="checkbox" id="no" name="Task" value="no"/>
+            <label for="no">No</label>
+          </td>
+          <td>
+            <textarea name="Comments" id="" placeholder="Enter comments..." required></textarea>
+          </td>
+          <td>
+            <button type="submit" id="btn">Submit</button>
+            <button type="reset">Reset</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
